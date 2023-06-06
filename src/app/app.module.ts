@@ -12,6 +12,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TableComponent } from './components/table/table.component';
 import { CarousalComponent } from './components/carousal/carousal.component';
+import { ExampleModuleModule } from './example-module/example-module.module';
+import { HeaderComponent } from './example-module/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,7 @@ import { CarousalComponent } from './components/carousal/carousal.component';
     RegistrationComponent,
     NavbarComponent,
     TableComponent,
-    CarousalComponent
+    CarousalComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { CarousalComponent } from './components/carousal/carousal.component';
     BrowserAnimationsModule,
     NgbModule,
     MatSlideToggleModule,
-    MatStepperModule
+    MatStepperModule,
+    ExampleModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
