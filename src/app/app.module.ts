@@ -13,7 +13,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { TableComponent } from './components/table/table.component';
 import { CarousalComponent } from './components/carousal/carousal.component';
 import { ExampleModuleModule } from './example-module/example-module.module';
-import { HeaderComponent } from './example-module/header/header.component';
 import { CounterAppComponent } from './components/counter-app/counter-app.component';
 
 @NgModule({
