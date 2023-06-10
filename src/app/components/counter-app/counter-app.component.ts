@@ -39,7 +39,7 @@ export class CounterAppComponent {
     if (this.count > 10) {
       className = 'highlight'
     }
-    else if (this.count < 10) {
+    else if (this.count <= 10) {
       className = 'fade-color'
     }
     return className
