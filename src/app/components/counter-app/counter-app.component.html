@@ -1,5 +1,9 @@
-<div>
-    <button (click)="counter('add')">+</button>
-    <p>{{count}}</p>
-    <button (click)="counter('sub')">-</button>
+<app-navbar></app-navbar>
+<div class="counterApp">
+    <div *ngIf="isActive" [ngClass]="profitOrLoss()">We are in {{status}}.</div>
+    <div class="hello">
+        <button (click)="counter('add')" class="increment">+</button>
+        <span [ngClass]="name()" class="count">{{count}}</span>
+        <button (click)="counter('sub')" class="decrement">-</button>
+    </div>
 </div>

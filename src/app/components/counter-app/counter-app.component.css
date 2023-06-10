@@ -1,0 +1,80 @@
+.counterApp {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.increment {
+    height: 300px;
+    width: 300px;
+    background-color: aquamarine;
+    font-size: 60px;
+}
+
+.count {
+    height: 300px;
+    width: 300px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+}
+
+.decrement {
+    height: 300px;
+    width: 300px;
+    background-color: bisque;
+    font-size: 60px;
+}
+
+.highlight {
+    color: 'red';
+    background-color: red;
+}
+
+.fade-color {
+    background-color: orange;
+}
+
+.profit {
+    height: 50px;
+    background-color: green;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loss {
+    height: 50px;
+    background-color: red;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stable{
+    height: 50px;
+    background-color: blue;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hello {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
