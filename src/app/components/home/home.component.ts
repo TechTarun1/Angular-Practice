@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  users = {
+    name: 'Tarun',
+    salary: 100000000
+  }
+
 }

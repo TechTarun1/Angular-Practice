@@ -14,6 +14,7 @@ import { TableComponent } from './components/table/table.component';
 import { CarousalComponent } from './components/carousal/carousal.component';
 import { ExampleModuleModule } from './example-module/example-module.module';
 import { CounterAppComponent } from './components/counter-app/counter-app.component';
+import { PropsComponentComponent } from './components/props-component/props-component.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CounterAppComponent } from './components/counter-app/counter-app.compon
     TableComponent,
     CarousalComponent,
     CounterAppComponent,
+    PropsComponentComponent,
   ],
   imports: [
     BrowserModule,

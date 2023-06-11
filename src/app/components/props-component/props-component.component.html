@@ -1,0 +1,18 @@
+<div>
+
+    <!--object loop-->
+    <p *ngFor="let val of users| keyvalue">{{val.key}}:{{val.value}}</p>
+
+    <!-- array ngFor -->
+    <p *ngFor="let val of names;index as i">{{i+1}}:{{val}}</p>
+
+    <!--ngSwitch-->
+    <div [ngSwitch]="authLevel">
+        <div *ngSwitchCase="'user'">Hi mawa</div>
+        <div *ngSwitchDefault>Hi default</div>
+    </div>
+    <div [ngSwitch]="true">
+        <div *ngSwitchCase="age>18">Major</div>
+        <div *ngSwitchDefault>Hi major</div>
+    </div>
+</div>
