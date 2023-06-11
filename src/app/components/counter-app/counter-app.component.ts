@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './counter-app.component.html',
   styleUrls: ['./counter-app.component.css']
 })
+
 export class CounterAppComponent {
   count: number = 0
   isActive: boolean = true
@@ -18,16 +19,14 @@ export class CounterAppComponent {
     console.log(this.count)
     let className = ''
     if (this.count > 10) {
-      // this.isActive = true
       className = 'profit'
       this.status = 'Profit'
     }
     else if (this.count < 0) {
-      // this.isActive = false
       className = 'loss'
       this.status = 'Loss'
     }
-    else{
+    else {
       className = 'stable'
       this.status = 'Stable'
     }

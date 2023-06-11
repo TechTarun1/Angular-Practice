@@ -1,24 +1,28 @@
 <div>
     <app-navbar></app-navbar>
-    <h1 class="text-success"><u>Toggle</u></h1>
-    <mat-slide-toggle>Toggle me!</mat-slide-toggle>
-    <h1 class="text-center text-success"><u>stepper</u></h1>
-    <mat-horizontal-stepper>
-        <mat-step label="Step 1">
-            <ng-template matStepLabel>Step 1</ng-template>
-            <h1 class="text-danger">This is the content of Step 1.</h1>
-            <app-navbar></app-navbar>
-        </mat-step>
-        <mat-step label="Step 2">
-            <ng-template matStepLabel>Step 2</ng-template>
-            <h1 class="text-danger">This is the content of Step 2.</h1>
-            <app-table></app-table>
-        </mat-step>
-        <mat-step label="Step 3">
-            <ng-template matStepLabel>Step 3</ng-template>
-            <h1 class="text-danger">This is the content of Step 3.</h1>
-            <app-carousal></app-carousal>
-        </mat-step>
-    </mat-horizontal-stepper>
-
+    <mat-slide-toggle [(ngModel)]="value" class="toggle-stepper">Open Stepper</mat-slide-toggle>
+    <ng-container *ngIf="value;else no">
+        <mat-horizontal-stepper>
+            <mat-step label="Step 1">
+                <ng-template matStepLabel>Step 1</ng-template>
+                <h1 class="text-success">Navbar</h1>
+                <app-navbar></app-navbar>
+            </mat-step>
+            <mat-step label="Step 2">
+                <ng-template matStepLabel>Step 2</ng-template>
+                <h1 class="text-success">Table.</h1>
+                <app-table></app-table>
+            </mat-step>
+            <mat-step label="Step 3">
+                <ng-template matStepLabel>Step 3</ng-template>
+                <h1 class="text-success">Carousal.</h1>
+                <app-carousal></app-carousal>
+            </mat-step>
+        </mat-horizontal-stepper>
+    </ng-container>
+    <ng-template #no>
+        <div class="eStepper">
+            Stepper is not enabled.
+        </div>
+    </ng-template>
 </div>

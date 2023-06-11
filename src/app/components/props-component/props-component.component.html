@@ -6,6 +6,7 @@
         <input type="text" [(ngModel)]="name" placeholder="Enter your name">
         <p>{{name}}</p>
     </div>
+
     <!--object loop-->
     <p *ngFor="let val of users| keyvalue">{{val.key}}:{{val.value}}</p>
 
@@ -21,4 +22,12 @@
         <div *ngSwitchCase="age>18">Major</div>
         <div *ngSwitchDefault>Hi major</div>
     </div>
+
+    <!--ngContainer and template-->
+    <ng-container *ngIf="isActive;else notActive">
+        <p>He is Active</p>
+    </ng-container>
+    <ng-template #notActive>
+        <p>He is not Active</p>
+    </ng-template>
 </div>

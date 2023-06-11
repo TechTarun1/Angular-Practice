@@ -1,0 +1,16 @@
+.toggle-stepper{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    height: 50px;
+    width:100%;
+    background-color: orange;
+}
+.eStepper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    font-size: 60px;
+}

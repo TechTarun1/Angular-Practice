@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class PropsComponentComponent {
   @Input() users: any;
   name: string = ''
+  isActive: boolean = false
   names: string[] = ['Tarun', 'Devi', 'Dinesh', 'Mrudula']
   authLevel: string = ''
   age: number = 19
