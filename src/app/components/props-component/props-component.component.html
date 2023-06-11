@@ -1,5 +1,11 @@
 <div>
 
+    <!--Input field-->
+    <div style="display: flex;">
+        <label>Name:</label>
+        <input type="text" [(ngModel)]="name" placeholder="Enter your name">
+        <p>{{name}}</p>
+    </div>
     <!--object loop-->
     <p *ngFor="let val of users| keyvalue">{{val.key}}:{{val.value}}</p>
 

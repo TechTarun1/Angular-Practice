@@ -7,7 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class PropsComponentComponent {
   @Input() users: any;
-  names = ['Tarun', 'Devi', 'Dinesh', 'Mrudula']
-  authLevel = ''
-  age=19
+  name: string = ''
+  names: string[] = ['Tarun', 'Devi', 'Dinesh', 'Mrudula']
+  authLevel: string = ''
+  age: number = 19
 }

@@ -15,6 +15,7 @@ import { CarousalComponent } from './components/carousal/carousal.component';
 import { ExampleModuleModule } from './example-module/example-module.module';
 import { CounterAppComponent } from './components/counter-app/counter-app.component';
 import { PropsComponentComponent } from './components/props-component/props-component.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PropsComponentComponent } from './components/props-component/props-comp
     NgbModule,
     MatSlideToggleModule,
     MatStepperModule,
-    ExampleModuleModule
+    ExampleModuleModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
