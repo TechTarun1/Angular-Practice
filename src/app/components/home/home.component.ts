@@ -12,4 +12,10 @@ export class HomeComponent {
     salary: 100000000
   }
 
+  hi:string='hi'
+
+  dataReceivedFRomChild(shareToParent:string){
+    alert('data received from child'+shareToParent)
+  }
+
 }

@@ -1,33 +1,53 @@
-<div>
+<div class="row">
+    <div style="display: flex;flex-direction: column;" class="col-3">
+        <!--Input field-->
+        <div style="display: flex;">
+            <label>Name:</label>
+            <input type="text" [(ngModel)]="name" placeholder="Enter your name">
+            <p>{{name}}</p>
+        </div>
 
-    <!--Input field-->
-    <div style="display: flex;">
-        <label>Name:</label>
-        <input type="text" [(ngModel)]="name" placeholder="Enter your name">
-        <p>{{name}}</p>
+        <!--object loop-->
+        <p style="margin: 6px;"><u>Objext loop with ngFor</u></p>
+        <p *ngFor="let val of users| keyvalue">{{val.key}}:{{val.value}}</p>
     </div>
 
-    <!--object loop-->
-    <p *ngFor="let val of users| keyvalue">{{val.key}}:{{val.value}}</p>
-
-    <!-- array ngFor -->
-    <p *ngFor="let val of names;index as i">{{i+1}}:{{val}}</p>
-
-    <!--ngSwitch-->
-    <div [ngSwitch]="authLevel">
-        <div *ngSwitchCase="'user'">Hi mawa</div>
-        <div *ngSwitchDefault>Hi default</div>
-    </div>
-    <div [ngSwitch]="true">
-        <div *ngSwitchCase="age>18">Major</div>
-        <div *ngSwitchDefault>Hi major</div>
+    <div class="col-3">
+        <!-- array ngFor -->
+        <p><u>Array</u></p>
+        <p *ngFor="let val of names;index as i">{{i+1}}:{{val}}</p>
     </div>
 
-    <!--ngContainer and template-->
-    <ng-container *ngIf="isActive;else notActive">
-        <p>He is Active</p>
-    </ng-container>
-    <ng-template #notActive>
-        <p>He is not Active</p>
-    </ng-template>
+    <div class="col-3">
+        <!--ngSwitch-->
+        <div [ngSwitch]="authLevel">
+            <div *ngSwitchCase="'user'" class="mt-2">Hi mawa</div>
+            <div *ngSwitchDefault class="mt-2">Hi default(swich default case)</div>
+        </div>
+        <div [ngSwitch]="true">
+            <div *ngSwitchCase="age>18" class="mt-2">Major(switch case)</div>
+            <div *ngSwitchDefault class="mt-2">Hi major</div>
+        </div>
+
+        <!--ngContainer and template-->
+        <ng-container *ngIf="isActive;else notActive">
+            <p class="mt-2">He is Active (ng-container if)</p>
+        </ng-container>
+        <ng-template #notActive>
+            <p class="mt-2">He is not Active(ng-template flase)</p>
+        </ng-template>
+    </div>
+
+    <div class="col-3">
+
+        <!--sending data to home as child to parent-->
+        <button (click)="shareToParent()">Send Data to Parent Home</button>
+
+        <!--services getter setter implementation-->
+        <div class="mt-3">
+            Data: {{ myService.getData() }}
+        </div>
+        <button (click)="updateData()">Update Data</button>
+        <p>used service and getters and setters updates the value as "new Value"</p>
+    </div>
 </div>
