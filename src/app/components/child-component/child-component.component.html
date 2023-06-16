@@ -1,0 +1,17 @@
+<h1 style="display: flex;justify-content: center;align-items: center;color: black;background-color: orange;">child
+    component
+</h1>
+<div class="card text-center">
+    <div class="card-header">
+        <!--content Projection from parent to child-->
+        <h2 style="color: red;"><ng-content></ng-content></h2>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title"><h2>{{message}}</h2></h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="card-footer text-muted">
+        2 days ago
+    </div>
+</div>

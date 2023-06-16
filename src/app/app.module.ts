@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatStepperModule } from '@angular/material/stepper';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -15,7 +17,11 @@ import { CarousalComponent } from './components/carousal/carousal.component';
 import { ExampleModuleModule } from './example-module/example-module.module';
 import { CounterAppComponent } from './components/counter-app/counter-app.component';
 import { PropsComponentComponent } from './components/props-component/props-component.component';
-import { FormsModule } from '@angular/forms';
+import { QueryAndUrlParamsComponent } from './components/query-and-url-params/query-and-url-params.component';
+import { ParentComponentComponent } from './components/parent-component/parent-component.component';
+import { ChildComponentComponent } from './components/child-component/child-component.component';
+import { Child1Component } from './components/child1/child1.component';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +33,10 @@ import { FormsModule } from '@angular/forms';
     CarousalComponent,
     CounterAppComponent,
     PropsComponentComponent,
+    QueryAndUrlParamsComponent,
+    ParentComponentComponent,
+    ChildComponentComponent,
+    Child1Component
   ],
   imports: [
     BrowserModule,
@@ -36,7 +46,8 @@ import { FormsModule } from '@angular/forms';
     MatSlideToggleModule,
     MatStepperModule,
     ExampleModuleModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

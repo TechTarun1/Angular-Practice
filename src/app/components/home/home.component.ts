@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,15 +8,24 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  constructor(private router: Router) { }
+
   users = {
     name: 'Tarun',
     salary: 100000000
   }
 
-  hi:string='hi'
+  hi: string = 'hi'
 
-  dataReceivedFRomChild(shareToParent:string){
-    alert('data received from child'+shareToParent)
+  dataReceivedFRomChild(shareToParent: string) {
+    alert('data received from child' + shareToParent)
   }
-
+  gotoCountQueryParams = () => {
+    const queryParams = { name: 'Tarun' };
+    this.router.navigate(['/count'], { queryParams: queryParams })
+  }
+  gotoqueryAndUrlParamsComponent = () => {
+    const urlParams = { id: 'Tarun' };
+    this.router.navigate(['/urlParams',urlParams.id])
+  }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-counter-app',
@@ -16,7 +17,6 @@ export class CounterAppComponent {
   }
 
   profitOrLoss = () => {
-    console.log(this.count)
     let className = ''
     if (this.count > 10) {
       className = 'profit'
@@ -42,5 +42,15 @@ export class CounterAppComponent {
       className = 'fade-color'
     }
     return className
+  }
+
+  queryParamName?: string;
+
+  constructor(private route: ActivatedRoute) { }
+
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params: any) => {
+      this.queryParamName = params.name;
+    });
   }
 }

@@ -1,0 +1,6 @@
+<app-navbar></app-navbar>
+<app-child-component [message]="message">
+    <p #child>content projection to child</p>
+</app-child-component>
+<app-child1 *ngFor="let f of messages" [message]="f">
+</app-child1>

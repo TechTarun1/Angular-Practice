@@ -1,8 +1,9 @@
 <div>
     <h1 class="text-center text-success"><u>Added bootstarp to my Angular Project</u></h1>
     <app-navbar></app-navbar><br/>
+    <button (click)="gotoCountQueryParams()">Go to counter using queryParams</button>
+    <button (click)="gotoqueryAndUrlParamsComponent()">Go to UrlParamsComponent</button>
     <app-props-component [users]="users" [hello]="hi" (dataFromChild)="dataReceivedFRomChild($event)"></app-props-component>
     <app-table></app-table>
     <app-carousal></app-carousal>
-    <router-outlet></router-outlet>
 </div>
