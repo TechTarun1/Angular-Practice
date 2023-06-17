@@ -1,0 +1,17 @@
+export function calculateSum(a: number, b: number): number {
+    return a + b;
+}
+
+export function formatDate(date: Date): string {
+    // Implementation to format the date
+    let formattedDate = ''
+    return formattedDate;
+}
+
+export class StringUtils {
+    static capitalize(str: string): string {
+        // Implementation to capitalize the string
+        let capitalizedStr
+        return capitalizedStr;
+    }
+}

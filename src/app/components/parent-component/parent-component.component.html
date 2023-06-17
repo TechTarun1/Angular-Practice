@@ -1,6 +1,29 @@
+<!--header-->
 <app-navbar></app-navbar>
-<app-child-component [message]="message">
-    <p #child>content projection to child</p>
-</app-child-component>
-<app-child1 *ngFor="let f of messages" [message]="f">
-</app-child1>
+
+<!--Template reference variable -->
+<div style="display: flex;justify-content: center;">
+    <div
+        style="display: flex;flex-direction: column;align-items: center; border: 2px solid black;margin: 10px;padding: 5px;width:500px;justify-content: center;background-color: aqua;">
+        <h1 #pref>Template Reference Variable example</h1>
+        <div style="display: flex;flex-direction: column;align-items: center;gap: 10px;">
+            <input type="text" #myInput ngModel
+                placeholder="enter value"><!--using template refence variable and ngModel based on this button disabled handling-->
+            <button [disabled]="myInput.value.length===0" (click)="sendInput(myInput,pref)"
+                style="border: 2px solid black;border-radius: 10px;">
+                TemplateRefVariable
+            </button>
+        </div>
+    </div>
+</div>
+
+<!--Toggle child-->
+<button (click)="toggleChild()">Toggle Child</button>
+
+<!--content projection and content child-->
+<div *ngIf="isChildVisible">
+    <app-child-component [message]="message">
+        <p #child>content projection to child</p>
+    </app-child-component>
+</div>
+<router-outlet></router-outlet>

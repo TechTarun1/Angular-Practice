@@ -1,4 +1,4 @@
-import { AfterContentInit, AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { ChildComponentComponent } from '../child-component/child-component.component';
 import { Child1Component } from '../child1/child1.component';
 import { MyServiceService } from 'src/app/my-service.service';
@@ -16,7 +16,12 @@ export class ParentComponentComponent implements OnInit {
   @ViewChild(ChildComponentComponent) messageViewChild!: ChildComponentComponent;
   @ViewChild(Child1Component) messageViewChildren!: Child1Component;
 
-  constructor(private cd: ChangeDetectorRef, private api: MyServiceService) { }
+  //Want to have focus on input 
+  @ViewChild('myInput', { static: true }) myCustomInput: any;
+
+  constructor(private cd: ChangeDetectorRef, private api: MyServiceService) {
+    console.log('Parent constructor')
+  }
 
   //it will chage the the initial message of child but gets an issue
   ngAfterViewInit(): void {
@@ -28,9 +33,16 @@ export class ParentComponentComponent implements OnInit {
     this.cd.detectChanges()
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    console.log('Parent onInit')
     this.message = 'message from parent'
     this.messages = this.getMessages()
+    this.api.getCountries().subscribe((data: any) => {
+      console.log('data', data.fact)
+    })
+
+    //to have focus on input
+    this.myCustomInput.nativeElement.focus()
   }
   getMessages = () => {
     return [
@@ -39,5 +51,17 @@ export class ParentComponentComponent implements OnInit {
       'Hello Mrudula',
       'Hello Dinesh'
     ]
+  }
+
+  //template variable access
+  sendInput = (input: any, para: any) => {
+    console.log('inputvalue', input.value)
+    console.log('paragraphTag', para.innerHTML)
+  }
+
+  //toggle child
+  isChildVisible: boolean = false
+  toggleChild = () => {
+    this.isChildVisible = !this.isChildVisible
   }
 }

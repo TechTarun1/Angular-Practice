@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -22,10 +22,13 @@ export class MyServiceService {
   public setData(value: string): void {
     this.data = value;
   }
-
+  headers = new HttpHeaders({
+    'content-type': 'application/json',
+    'Access-Control-Allow-Origin': '*'
+  })
   //get Api call
-  getCountries(): Observable<any> {
-    const url = 'https://restcountries.eu/rest/v2/all'; // Replace with your API endpoint
-    return this.http.get<any>(url);
+  getCountries = () => {
+    const url = "https://catfact.ninja/fact"; // Replace with your API endpoint
+    return this.http.get<any>(url, { headers: this.headers });
   }
 }

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" routerLink="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,17 +8,27 @@
     <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/home">Home</a>
+                <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/main">Main</a>
+                <a class="nav-link" routerLink="/main" routerLinkActive="active">Main</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/registration">registration</a>
+                <a class="nav-link" routerLink="/registration" routerLinkActive="active">registration</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/count">counterApp</a>
+                <a class="nav-link" routerLink="/count" routerLinkActive="active">counterApp</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/forms" routerLinkActive="active">TemplateForm</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/reactiveForms" routerLinkActive="active">Reactive/Model Driven forms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/parent" routerLinkActive="active">Parent</a>
+            </li>
+
         </ul>
         <form class="form-inline my-2 my-lg-0 d-flex flex-end">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

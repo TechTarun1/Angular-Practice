@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatStepperModule } from '@angular/material/stepper';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -21,6 +21,10 @@ import { QueryAndUrlParamsComponent } from './components/query-and-url-params/qu
 import { ParentComponentComponent } from './components/parent-component/parent-component.component';
 import { ChildComponentComponent } from './components/child-component/child-component.component';
 import { Child1Component } from './components/child1/child1.component';
+import { FormsComponent } from './components/forms/forms.component';
+import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
+import { InitialsPipe } from './initials.pipe';
+import { PipesExComponent } from './components/pipes-ex/pipes-ex.component';
 
 
 @NgModule({
@@ -36,7 +40,11 @@ import { Child1Component } from './components/child1/child1.component';
     QueryAndUrlParamsComponent,
     ParentComponentComponent,
     ChildComponentComponent,
-    Child1Component
+    Child1Component,
+    FormsComponent,
+    ReactiveFormsComponent,
+    InitialsPipe,
+    PipesExComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +55,8 @@ import { Child1Component } from './components/child1/child1.component';
     MatStepperModule,
     ExampleModuleModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

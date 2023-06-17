@@ -6,5 +6,4 @@ import { Component,Input } from '@angular/core';
   styleUrls: ['./child1.component.css']
 })
 export class Child1Component {
-  @Input() message?: any
 }
