@@ -1,26 +1,27 @@
 <div class="row">
-    <div style="display: flex;flex-direction: column;" class="col-3">
+    <div style="background-color: pink;display: flex;justify-content: center;flex-direction: column;align-items: center;" class="col-3">
         <!--Input field-->
         <div style="display: flex;">
-            <label>Name:</label>
+            <label><b>Name:</b></label>
             <input type="text" [(ngModel)]="name" placeholder="Enter your name">
             <p>{{name}}</p>
         </div>
 
         <!--object loop-->
-        <p style="margin: 6px;"><u>Objext loop with ngFor</u></p>
+        <h2 style="margin-top: 10px;"><u>Objext loop with ngFor</u></h2>
         <p *ngFor="let val of users| keyvalue">{{val.key}}:{{val.value}}</p>
     </div>
 
-    <div class="col-3">
+    <div class="col-3" style="background-color: aqua;display: flex;justify-content: center;flex-direction: column;align-items: center;">
         <!-- array ngFor -->
-        <p><u>Array</u></p>
+        <h2><u>Array with indexing</u></h2>
         <p *ngFor="let val of names;index as i">{{i+1}}:{{val}}</p>
     </div>
 
-    <div class="col-3">
+    <div class="col-3" style="background-color: orange;display: flex;justify-content: center;flex-direction: column;align-items: center;">
+        <h2 style="margin: 0;padding: 0;"><u>Switch,ng-container&ng-template</u></h2>
         <!--ngSwitch-->
-        <div [ngSwitch]="authLevel">
+        <div [ngSwitch]="authLevel" style="margin-top: 30px;">
             <div *ngSwitchCase="'user'" class="mt-2">Hi mawa</div>
             <div *ngSwitchDefault class="mt-2">Hi default(swich default case)</div>
         </div>
@@ -38,7 +39,7 @@
         </ng-template>
     </div>
 
-    <div class="col-3">
+    <div class="col-3" style="background-color: greenyellow;display: flex;justify-content: center;flex-direction: column;align-items: center;">
 
         <!--sending data to home as child to parent-->
         <button (click)="shareToParent()">Send Data to Parent Home</button>

@@ -1,9 +1,17 @@
 <div>
     <h1 class="text-center text-success"><u>Added bootstarp to my Angular Project</u></h1>
-    <app-navbar></app-navbar><br/>
-    <button (click)="gotoCountQueryParams()">Go to counter using queryParams</button>
-    <button (click)="gotoqueryAndUrlParamsComponent()">Go to UrlParamsComponent</button>
-    <app-props-component [users]="users" [hello]="hi" (dataFromChild)="dataReceivedFRomChild($event)"></app-props-component>
+    <app-navbar></app-navbar>
+    <div style="background-color: yellow;display: flex;justify-content: center;align-items: center; height: 50px;">
+        <button (click)="gotoCountQueryParams()" style="border-radius:10px;background-color: blue; color: white;height: 30px;">Go to
+            counter using queryParams
+        </button>
+        <button (click)="gotoqueryAndUrlParamsComponent()"
+            style="margin-left: 10px;border-radius:10px;background-color: rgb(239, 13, 227);color: white;height: 30px;">Go to
+            UrlParamsComponent
+        </button>
+    </div>
+    <app-props-component [users]="users" [hello]="hi"
+        (dataFromChild)="dataReceivedFRomChild($event)"></app-props-component>
     <app-table></app-table>
     <app-carousal></app-carousal>
 </div>
