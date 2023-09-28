@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import * as React from 'react';
 
 @Component({
   selector: 'app-home',
@@ -28,4 +29,8 @@ export class HomeComponent {
     const urlParams = { id: 'Tarun' };
     this.router.navigate(['/urlParams',urlParams.id])
   }
+
+ hii=()=>{
+alert('wfgydfty')
+ }
 }
